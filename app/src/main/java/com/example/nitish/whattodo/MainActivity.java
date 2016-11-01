@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        DatabaseHandler dh = new DatabaseHandler(this);
+        todoList = dh.getAllToDos();
+
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         mAdapter = new ToDoAdapter(todoList);
@@ -33,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
-        prepareToDoData();
+        mAdapter.notifyDataSetChanged();
+
+        //prepareToDoData();
     }
 
     private void prepareToDoData() {
@@ -42,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         todo = new ToDo("MC", "Action & Adventure",3);
         todoList.add(todo);
-
         todo = new ToDo("MC", "Action & Adventure",3);
         todoList.add(todo);
         todo = new ToDo("MC", "Action & Adventure",3);

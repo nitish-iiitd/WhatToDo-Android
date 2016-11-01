@@ -73,6 +73,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // Inserting Row
         db.insert(TABLE_TODO, null, values);
         db.close(); // Closing database connection
+
     }
 
     public ToDo getToDo(String title) {

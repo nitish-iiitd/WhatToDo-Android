@@ -4,7 +4,6 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context="com.example.nitish.whattodo.MainActivity">
 
     <android.support.v7.widget.Toolbar
@@ -13,7 +12,6 @@
         android:background="@color/blue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         >
 
         <ImageButton
@@ -31,11 +29,11 @@
 
     </android.support.v7.widget.Toolbar>
 
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
         android:scrollbars="vertical" />
+
 </RelativeLayout>
