@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_display_to_do"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.example.nitish.whattodo.DisplayToDoActivity">
+    <TextView
+        android:id="@+id/title"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Title"
+        android:gravity="bottom"
+        android:textAlignment="gravity"/>
+    <TextView
+        android:id="@+id/details"
+        android:textColor="@color/blue"
+        android:background="@color/white"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="Details"/>
+
+</LinearLayout>

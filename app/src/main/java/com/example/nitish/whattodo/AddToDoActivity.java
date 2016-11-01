@@ -21,7 +21,7 @@ public class AddToDoActivity extends AppCompatActivity {
         EditText titletext = (EditText)findViewById(R.id.title);
         String title = titletext.getText().toString();
 
-        EditText detailstext = (EditText)findViewById(R.id.title);
+        EditText detailstext = (EditText)findViewById(R.id.details);
         String details = detailstext.getText().toString();
 
         ToDo todo = new ToDo(title,details,5);

@@ -27,8 +27,8 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
-            details = (TextView) view.findViewById(R.id.details);
-            importance = (TextView) view.findViewById(R.id.importance);
+            //details = (TextView) view.findViewById(R.id.details);
+            //importance = (TextView) view.findViewById(R.id.importance);
         }
     }
 

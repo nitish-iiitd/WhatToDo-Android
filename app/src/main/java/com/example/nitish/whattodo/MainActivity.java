@@ -8,11 +8,17 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
 public class MainActivity extends AppCompatActivity {
+
+
 
     private List<ToDo> todoList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -20,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -28,16 +35,35 @@ public class MainActivity extends AppCompatActivity {
         DatabaseHandler dh = new DatabaseHandler(this);
         todoList = dh.getAllToDos();
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
 
         mAdapter = new ToDoAdapter(todoList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+
+        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                ToDo todo = todoList.get(position);
+
+                Intent displayscreen = new Intent(getApplicationContext(),DisplayToDoActivity.class);
+                displayscreen.putExtra("todotitle",todo.getTitle());
+                displayscreen.putExtra("tododetails",todo.getDetails());
+                startActivity(displayscreen);
+                Toast.makeText(getApplicationContext(), todo.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
         recyclerView.setAdapter(mAdapter);
 
         mAdapter.notifyDataSetChanged();
-
         //prepareToDoData();
     }
 
