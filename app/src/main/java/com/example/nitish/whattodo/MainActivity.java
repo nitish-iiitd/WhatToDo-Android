@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private List<ToDo> todoList = new ArrayList<>();
+    public static List<ToDo> todoList = new ArrayList<>();
     private RecyclerView recyclerView;
     private ToDoAdapter mAdapter;
 
@@ -49,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view, int position) {
                 ToDo todo = todoList.get(position);
 
-                Intent displayscreen = new Intent(getApplicationContext(),DisplayToDoActivity.class);
+               // Intent displayscreen = new Intent(getApplicationContext(),DisplayToDoActivity.class);
+                Intent displayscreen = new Intent(getApplicationContext(),DisplayVPActivity.class);
                 displayscreen.putExtra("todotitle",todo.getTitle());
                 displayscreen.putExtra("tododetails",todo.getDetails());
+                displayscreen.putExtra("position",position);
                 startActivity(displayscreen);
                 Toast.makeText(getApplicationContext(), todo.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
             }
