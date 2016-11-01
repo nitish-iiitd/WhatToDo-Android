@@ -1,8 +1,10 @@
 package com.example.nitish.whattodo;
 
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,5 +40,11 @@ public class DisplayVPActivity extends AppCompatActivity {
 
 //        DatabaseHandler dh = new DatabaseHandler(this);
 //        todoList = dh.getAllToDos();
+    }
+
+    public void goToHome(View v)
+    {
+        Intent homescreen = new Intent(this,MainActivity.class);
+        startActivity(homescreen);
     }
 }

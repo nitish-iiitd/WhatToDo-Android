@@ -19,28 +19,18 @@ public class CustomPagerAdapter extends PagerAdapter {
 
     private Context mContext;
     LayoutInflater mLayoutInflater;
-    //public List<ToDo> todoList = new ArrayList<>();
+
 
     public CustomPagerAdapter(Context context) {
         mContext = context;
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //DatabaseHandler dh = new DatabaseHandler(this);
-        //todoList = dh.getAllToDos();
+
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-//        ToDo modelObject = ModelObject.values()[position];
-//        LayoutInflater inflater = LayoutInflater.from(mContext);
-//        ViewGroup layout = (ViewGroup) inflater.inflate(modelObject.getLayoutResId(), collection, false);
-//        collection.addView(layout);
-//        return layout;
+
         View itemView = mLayoutInflater.inflate(R.layout.activity_display_to_do, container, false);
-
-        //ImageView imageView = (ImageView) itemView.findViewById(R.id.imageView);
-        //imageView.setImageResource(mResources[position]);
-
-
 
         TextView titletext = (TextView) itemView.findViewById(R.id.title);
         TextView detailstext = (TextView) itemView.findViewById(R.id.details);
