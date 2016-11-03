@@ -33,4 +33,10 @@ public class AddToDoActivity extends AppCompatActivity {
         Intent mainscreen = new Intent(this,MainActivity.class);
         startActivity(mainscreen);
     }
+
+    public void goToHome(View v)
+    {
+        Intent homescreen = new Intent(this,MainActivity.class);
+        startActivity(homescreen);
+    }
 }

@@ -24,8 +24,8 @@ public class DisplayVPActivity extends AppCompatActivity {
             if (extras == null) {
                 position = 0;
             } else {
-                System.out.println("title : " + extras.getString("todotitle"));
-                System.out.println("position : " + extras.getString("position"));
+                //System.out.println("title : " + extras.getString("todotitle"));
+                //System.out.println("position : " + extras.getString("position"));
                 position = extras.getInt("position");
 
             }

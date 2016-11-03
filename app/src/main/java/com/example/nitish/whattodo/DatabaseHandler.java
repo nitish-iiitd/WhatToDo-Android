@@ -94,15 +94,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     public int deleteToDo(String title) {
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
 
 //        Cursor cursor = db.query(TABLE_QUOTES, new String[] { KEY_ID,
 //                        KEY_ID, KEY_TEXT }, KEY_ID + "=?",
 //                new String[] { String.valueOf(id) }, null, null, null, null);
-        String deletetodoquery = "DELETE FROM " + TABLE_TODO + " WHERE "+KEY_TITLE+" = "+title;
+        String deletetodoquery = "DELETE FROM " + TABLE_TODO + " WHERE "+KEY_TITLE+" = '"+title+"'";
         try {
             db.execSQL(deletetodoquery);
-            return 0;
+           // return db.delete(TABLE_TODO, KEY_TITLE + "=" + title, null) ;
+            return 1;
         }catch (Exception e)
         {
             return -1;

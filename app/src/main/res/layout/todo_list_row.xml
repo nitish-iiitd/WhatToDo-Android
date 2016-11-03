@@ -2,49 +2,72 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
     android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
-    android:clickable="true"
-    android:background="?android:attr/selectableItemBackground"
-    android:orientation="vertical">
+    android:paddingTop="10dp">
 
     <TextView
         android:id="@+id/title"
-        android:textColor="@color/blue"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""/>
-
-    <TextView
-        android:id="@+id/details"
-        android:layout_below="@id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""/>
-
-    <!--<TextView-->
-        <!--android:id="@+id/importance"-->
-        <!--android:textColor="@color/blue"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text=""/>-->
-    <ImageButton
-        android:id="@+id/doneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="0dp"
-        android:onClick="todoDone"
-        android:src="@drawable/ic_check_circle_white_36dp"
-        android:background="@color/blue"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:text=""
+        android:textColor="@color/blue"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/deletemsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
+        android:text="Long Press to Delete"
+        android:textColor="@color/blue"
+        android:textSize="10sp"
+        android:textStyle="italic"
         android:layout_alignParentRight="true"/>
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/doneButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:layout_margin="0dp"-->
+        <!--android:background="@color/blue"-->
+        <!--android:onClick="todoDone"-->
+        <!--android:src="@drawable/ic_check_circle_white_36dp" />-->
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:layout_margin="0dp"-->
+        <!--android:background="@color/blue"-->
+        <!--android:text="Done"-->
+        <!--android:onClick="todoDone"-->
+        <!--android:src="@drawable/ic_check_circle_white_36dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/details"-->
+    <!--android:layout_below="@id/title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text=""/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/importance"-->
+    <!--android:textColor="@color/blue"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text=""/>-->
+
 
 </RelativeLayout>
