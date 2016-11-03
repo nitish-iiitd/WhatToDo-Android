@@ -47,4 +47,9 @@ public class DisplayVPActivity extends AppCompatActivity {
         Intent homescreen = new Intent(this,MainActivity.class);
         startActivity(homescreen);
     }
+
+    public void goToAddToDo(View v) {
+        Intent addscreen = new Intent(this, AddToDoActivity.class);
+        startActivity(addscreen);
+    }
 }

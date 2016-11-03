@@ -13,5 +13,9 @@
     <style name="AppTheme2" parent="Theme.AppCompat">
 
     </style>
+    <style name="MyButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/matpurple</item>
+        <item name="colorButtonNormal">@color/blue</item>
+    </style>
 
 </resources>

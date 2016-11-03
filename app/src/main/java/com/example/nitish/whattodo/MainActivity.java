@@ -87,11 +87,11 @@ public class MainActivity extends AppCompatActivity {
                         int deleted = dh.deleteToDo(todo.getTitle());
                         if(deleted >0 )
                         {
-                            Toast.makeText(getApplicationContext(),"ToDo Deleted",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"ToDo Deleted",Toast.LENGTH_SHORT).show();
                         }
                        else
                         {
-                            Toast.makeText(getApplicationContext(),"Error in deleting!",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Error in deleting!",Toast.LENGTH_SHORT).show();
                         }
                         Intent mainscreen = new Intent(MainActivity.this, MainActivity.class);
                         startActivity(mainscreen);
