@@ -30,7 +30,7 @@
             android:layout_gravity="right"
             android:layout_margin="10dp"
             android:onClick="goToAddToDo"
-            android:text="+"
+
             android:src="@drawable/ic_add_circle_outline_white_36dp"
             android:background="@color/blue"
             android:textAllCaps="false"

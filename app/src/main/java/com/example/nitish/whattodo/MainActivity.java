@@ -54,10 +54,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view, int position) {
 
-
-
-
-
                 //ToDo todo = todoList.get(position);
 
                     // Intent displayscreen = new Intent(getApplicationContext(),DisplayToDoActivity.class);

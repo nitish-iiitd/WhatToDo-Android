@@ -30,6 +30,14 @@
             android:background="@color/blue"
             android:textAllCaps="false"
             android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_a_todo"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true" />
         <!--<ImageView-->
             <!--android:layout_width="wrap_content"-->
             <!--android:layout_height="wrap_content"-->
@@ -37,22 +45,13 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/toolbar"
-        android:text="Add a ToDo"
-        android:textSize="30sp"
-        android:textColor="@color/blue"
-        android:layout_centerHorizontal="true" />
+
 
     <RelativeLayout
         android:id="@+id/inputTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/heading"
+        android:layout_below="@+id/toolbar"
         android:layout_marginTop="20dp"
         android:padding="10dp"
         >
@@ -69,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/titlelable"
-            android:hint="Enter the title of ToDo "
+            android:hint="@string/title"
             android:textColorHint="@color/grey"
             />
 
@@ -95,10 +94,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/detailslable"
-            android:hint="Enter the details of ToDo"
+            android:hint="@string/details"
             android:textColorHint="@color/grey"
             android:inputType="textMultiLine"
-            android:lines="1"/>
+            android:lines="4"/>
 
     </RelativeLayout>
 
@@ -111,7 +110,7 @@
         android:onClick="addToDo"
         android:layout_alignParentBottom="false"
         android:layout_centerHorizontal="true"
-        android:text="Add"
+        android:text="@string/add"
         android:layout_below="@+id/inputDetails"
         android:textAllCaps="false"
         android:textColor="@color/white"

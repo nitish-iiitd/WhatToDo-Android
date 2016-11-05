@@ -37,8 +37,9 @@ public class CustomPagerAdapter extends PagerAdapter {
         String title = MainActivity.todoList.get(position).getTitle();
         String details = MainActivity.todoList.get(position).getDetails();
         titletext.setText(title);
-        detailstext.setText(details);
-
+        if(!details.equals("")) {
+            detailstext.setText(details);
+        }
         container.addView(itemView);
 
         return itemView;

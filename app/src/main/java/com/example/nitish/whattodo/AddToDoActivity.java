@@ -20,9 +20,28 @@ public class AddToDoActivity extends AppCompatActivity {
 
         EditText titletext = (EditText)findViewById(R.id.title);
         String title = titletext.getText().toString();
+        if(title.equals(""))
+        {
+            Toast.makeText(this,"Title cannot be empty !",Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        for(int i=0;i<MainActivity.todoList.size();i++)
+        {
+            if(title.equals(MainActivity.todoList.get(i).getTitle()))
+            {
+                Toast.makeText(this,"Title already taken!",Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
 
         EditText detailstext = (EditText)findViewById(R.id.details);
         String details = detailstext.getText().toString();
+//        if(details.equals(""))
+//        {
+//            Toast.makeText(this,"Detail cannot be empty !",Toast.LENGTH_LONG).show();
+//            return;
+//        }
 
         ToDo todo = new ToDo(title,details,5);
 

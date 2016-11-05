@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="false"
         android:layout_alignParentBottom="true"
-        android:text="Long Press to Delete"
+        android:text="@string/deletemessage"
         android:textColor="@color/blue"
         android:textSize="10sp"
         android:textStyle="italic"
